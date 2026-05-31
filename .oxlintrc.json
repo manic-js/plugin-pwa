@@ -1,0 +1,13 @@
+{
+  "plugins": ["react", "unicorn", "typescript"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "warn",
+    "pedantic": "warn"
+  },
+  "rules": {
+    "max-lines": "off",
+    "max-lines-per-function": "off"
+  }
+}

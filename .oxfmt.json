@@ -1,0 +1,8 @@
+{
+  "lineWidth": 80,
+  "indentWidth": 2,
+  "useTabs": false,
+  "semicolons": true,
+  "quotes": "single",
+  "trailingCommas": "es5"
+}
