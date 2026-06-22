@@ -609,8 +609,9 @@ export function pwa(config: Partial<PwaConfig> = {}) {
     ],
     async configureServer(ctx) {
       const resolved = await getResolvedConfig(ctx);
-      const html = buildHtml({ ...resolved, serviceWorkerPath }, manifestPath);
       ctx.addLinkHeader?.(`<${manifestPath}>; rel="manifest"; type="application/manifest+json"`);
+      const devResolved = { ...resolved, register: false };
+      const html = buildHtml({ ...devResolved, serviceWorkerPath }, manifestPath);
       ctx.injectHtml(html);
     },
     async build(ctx) {
